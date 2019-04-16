@@ -1,0 +1,3 @@
+node_modules
+
+// .gitignore 文件写入 node_modules，忽略node_modules
