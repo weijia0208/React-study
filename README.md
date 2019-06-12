@@ -19,7 +19,7 @@
 - 魏佳（产品经理、UI设计师、开发工程师、测试工程师）
   - Email：[1002475276@qq.com](mailto:1002475276@qq.com)
   - Github：[https://github.com/ZhuoZm](https://github.com/ZhuoZm)
-- 杨晓宇（质量专家、UI设计师、测试工程师）
+- 王秀莲（质量专家、UI设计师、测试工程师）
   - Email：[1544329238@qq.com](mailto:1544329238@qq.com)
   - Github：[https://github.com/wangxiulian](https://github.com/yangxiaoyu98)
 
