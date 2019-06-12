@@ -18,10 +18,10 @@
   - Github：[https://github.com/yaojingo728](https://github.com/yaojingo728)
 - 魏佳（产品经理、UI设计师、开发工程师、测试工程师）
   - Email：[1002475276@qq.com](mailto:1002475276@qq.com)
-  - Github：[https://github.com/ZhuoZm](https://github.com/ZhuoZm)
+  - Github：[https://github.com/weijia0208](https://github.com/weijia0208)
 - 王秀莲（质量专家、UI设计师、测试工程师）
   - Email：[1544329238@qq.com](mailto:1544329238@qq.com)
-  - Github：[https://github.com/wangxiulian](https://github.com/yangxiaoyu98)
+  - Github：[https://github.com/wangxiulian](https://github.com/wangxiulian)
 
 ### 项目截图
 
