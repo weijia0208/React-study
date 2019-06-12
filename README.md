@@ -1,149 +1,47 @@
-<!-- # React-study -->
-# webpack 学习
-> 模块打包机，打包所有的资源、脚本、图片、样式表，自动刷新，代码校验
-## 项目初始化
-- 新建一个webpack文件夹
-- cd webpack 执行 yarn init -y
-- 创建一个src文件夹，里面创建一个index.js
-## 安装 webpack
-- 本地安装，-D 代表是开发依赖，上线不需要，不加默认是项目依赖 
-```
-yarn add webpack webpack-cli -D
-```
-- 创建.gitignore文件
-- webpack可以进行0配置，直接运行 npx webpack
-## 配置 webpack
-- 创建一个 webpack.config.js 文件
-```
-const path = require('path');
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  }
-};
-```
-- 配置 package.json, 设置npm脚本,执行npm run build
-```
-"scripts":{
-    "build":"webpack"
-},
-```
-- 设定 HtmlWebpackPlugin
-```
-安装
-yarn add html-webpack-plugin -D
-配置
-plugins: [// 插件
-    new HtmlWebpackPlugin({ //自动生成HTML并引入js
-        title: 'webpack',
-        template:'./src/index.html',
-        hash:true,
-        minify:{
-            collapseWhitespace: true,
-            removeScriptTypeAttributes: true,
-            removeAttributeQuotes:true
-        }
-    })
-]
-```
-- 设置clean-webpack-plugin插件，清除原来生成的文件
-```
-yarn add clean-webpack-plugin -D
-```
-- 设置webpack-dev-server,执行 npx webpack-dev-server
-，生成内存中的index.html,并执行
-```
-yarn add webpack-dev-server -D
-可配置webpack.config.js
-devServer:{
-    port:3000
-},
-```
-- 设置package.json
-```
-"scripts": {
-    "build": "webpack",
-    "start":"webpack-dev-server --open"
-},
-```
-### loader
-- style-loader css-loader
-```
-安装：
-yarn add style-loader css-loader -D
-配置：
-module: {
-    rules:[
-        {
-            test:/\.css$/,
-            use:[//loader匹配的顺序是从右往左
-                'style-loader',
-                'css-loader'
-            ]
-        }
-    ]
-}
-loader 带参数
-module: {
-    rules:[
-        {
-            test:/\.css$/,
-            use:[//loader匹配的顺序是从右往左
-                {
-                    loader:'style-loader',
-                    options: {
-                        insertAt: 'top'
-                    }
-                },
-                'css-loader'
-            ]
-        }
-    ]
-}
-```
-- less-loader
-```
-yarn add less less-loader -D
-```
-- mini-css-extract-plugin 抽取css
-```
-安装：
-yarn add mini-css-extract-plugin -D
-配置代码：
-loader中
-{
-    test:/\.css$/,
-    use:[
-        {
-            loader: MiniCssExtractPlugin.loader,
-        },
-        'css-loader'
-    ]
-},
-插件中
-new MiniCssExtractPlugin({
-    filename: 'index.css',
-}),
-```
-- babel-loader
-```
-安装：
-yarn add babel-loader @babel/core @babel/preset-env -D
-配置：
-{
-    test: /\.js$/,
-    exclude: /(node_modules|bower_components)/,
-    use: {
-        loader: 'babel-loader',
-        options: {
-            presets: ['@babel/preset-env',"@babel/preset-react"],
-            "plugins": [
-                "@babel/plugin-transform-runtime",
-                "@babel/plugin-proposal-class-properties"
-            ]
-        }
-    }
-}
-```
+﻿<img src="../../../image/logo.jpg"/>
+
+# 2016级项目实训成果展示 
+
+## 《蚂蚁寻物》 - HTML5与移动互联网应用开发
+
+### 项目简介
+
+蚂蚁寻物是一款包含基于地点闲置物品买卖，失物招领的APP。 旨在根据商品地点，方便广大师生对物品的选择。为各大高校的师生提供详细的分类二手物品，可以在线上进行聊天交互，线下进行交易。保障商品的可靠性，减少师生买卖物品地点上的局限性。 用户可以通过失物招领模块找到自己丢失物品或上传捡到的东西，特别是当用户通过校园卡实名注册后，在本人遗失校园卡被人找到时，可以第一时间接收推送。减少了师生寻找丢失物品的时间，避免在校园内毫无目标地寻找自己的东西
+
+### 项目地址
+- Github：[https://github.com/weijia0208/project-training](https://github.com/weijia0208/project-training)
+
+### 项目成员
+
+- 姚静（项目经理、UI设计师、开发工程师、测试工程师）
+  - Email：[1903123658@qq.com](mailto:1903123658@qq.com) 
+  - Github：[https://github.com/yaojingo728](https://github.com/yaojingo728)
+- 魏佳（产品经理、UI设计师、开发工程师、测试工程师）
+  - Email：[1002475276@qq.com](mailto:1002475276@qq.com)
+  - Github：[https://github.com/ZhuoZm](https://github.com/ZhuoZm)
+- 杨晓宇（质量专家、UI设计师、测试工程师）
+  - Email：[1544329238@qq.com](mailto:1544329238@qq.com)
+  - Github：[https://github.com/wangxiulian](https://github.com/yangxiaoyu98)
+
+### 项目截图
+
+<p>
+<img src="./image/首页.png" width=250 height=400 />
+<img src="./image/分类.png" width=250 height=400 />
+<img src="./image/上拉刷新.png" width=250 height=400 />
+</p>
+<p>
+<img src="./image/发布商品.png" width=250 height=400 />
+<img src="./image/发布成功.png" width=250 height=400 />
+<img src="./image/个人中心.png" width=250 height=400 />
+</p>
+<p>
+<img src="./image/关于小程序.png" width=250 height=400 />
+<img src="./image/我的二手物品.png" width=250 height=400 />
+<img src="./image/意见反馈.png" width=250 height=400 />
+</p>
+<p>
+<img src="./image/商品详情.png" width=250 height=400 />
+<img src="./image/联系对方.png" width=250 height=400 />
+<img src="./image/商品删除成功.png" width=250 height=400 />
+</p>
